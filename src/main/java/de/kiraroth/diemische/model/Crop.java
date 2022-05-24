@@ -25,7 +25,6 @@ public class Crop {
     @Column(name="crop_nutrient_requirements")
     private String crop_nutrient_requirements;
 
-    //Kalle: wrong typo in database: "crop_familiy"
     @Column(name="crop_familiy")
     private String crop_family;
 
@@ -34,18 +33,6 @@ public class Crop {
 
     @OneToMany(mappedBy = "crops", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private Set<CropType> types = new HashSet<>();
-
-    //@OneToMany(mappedBy = "crops")
-    //private Set<PosCropRotation> posCropRotations = new HashSet<>();
-
-    //@OneToMany(mappedBy = "crops")
-    //private Set<NegCropRotation> negCropRotations = new HashSet<>();
-
-    //@OneToMany(mappedBy = "crops")
-    //private Set<PosPolyCultivation> pos_polycultivations = new HashSet<>();
-
-    //@OneToMany(mappedBy = "crops")
-    //private Set<NegPolyCultivation> neg_polycultivations = new HashSet<>();
 
     public Crop() {
     }
